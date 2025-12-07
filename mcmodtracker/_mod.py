@@ -229,4 +229,4 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
             if mod_dict.get("good", True) is False:
                 print(f"{yaml_path.name}: bad MOD {mod_dict['title']} is installed: {mods[mod_dict['modId']].jar}")
 
-    print("-----------DONE-----------")
+    print("\n-----------DONE-----------")
