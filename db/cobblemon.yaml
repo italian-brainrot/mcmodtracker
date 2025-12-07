@@ -1,0 +1,29 @@
+# -------------------------------- Cobblemon --------------------------------- #
+modrinth/cobblemon:
+  url: https//modrinth.com/mod/cobblemon
+  modId: cobblemon
+  title: Cobblemon
+  summary: A Pokémon mod for Fabric and NeoForge
+
+  description: CobbleMon
+
+
+# -------------------------------- Gravelmon --------------------------------- #
+modrinth/gravelmon:
+  url: https//modrinth.com/mod/gravelmon
+  modId: gravelmon
+  title: Gravelmon
+  summary: Gravelmon is a fakemon addon for the popular cobblemon mod that aims to add classic and notable fakemon to minecraft.
+
+  description: Many Fake-Mons
+
+
+# ------------------------ Radical Cobblemon Trainers ------------------------ #
+modrinth/rctmod:
+  url: https//modrinth.com/mod/rctmod
+  modId: rctmod
+  title: Radical Cobblemon Trainers
+  summary: Over 1500 unique and challenging trainers, from the Pokemon ROM hacks Radical Red (v3.02) and Unbound (v2.0.3.2) as well as the main series games Brilliant Diamond/Shining Pearl, that will spawn naturally in your world.
+
+  description: trainers
+

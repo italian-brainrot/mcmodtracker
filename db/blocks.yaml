@@ -1,0 +1,22 @@
+# ---------------------------------- Twigs ----------------------------------- #
+modrinth/twigs:
+  url: https//modrinth.com/mod/twigs
+  title: Twigs
+  summary: A Minecraft building blocks mod
+
+  description: good blocks
+
+
+# --------------------------------- Blockus ---------------------------------- #
+modrinth/blockus:
+  url: https//modrinth.com/mod/blockus
+  title: Blockus
+  summary: A mod that adds blocks!
+
+  description: good blocks
+
+
+# --------------------------- curseforge/unearthed --------------------------- #
+curseforge/unearthed:
+  description: stones
+

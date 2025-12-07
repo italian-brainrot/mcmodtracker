@@ -1,0 +1,81 @@
+# --------------------------------- Forgero ---------------------------------- #
+modrinth/forgero:
+  url: https//modrinth.com/mod/forgero
+  title: Forgero
+  summary: Tool creation and customization mod with an immense amount of variations and possible upgrades
+
+  description: make tool
+
+
+# -------------------------------- Conjuring --------------------------------- #
+modrinth/conjuring:
+  url: https//modrinth.com/mod/conjuring
+  title: Conjuring
+  summary: Ridiculously fast spawners and powerful tools
+
+  description: some kind of popular end game MOD with super fast spawner
+
+
+# ------------------------------- Hex Casting -------------------------------- #
+modrinth/hex-casting:
+  url: https//modrinth.com/mod/hex-casting
+  title: Hex Casting
+  summary: Powerful programmable stack-based spellcasting
+
+  description: spells with stack based programming
+
+
+# ------------------------------- Ars Nouveau -------------------------------- #
+modrinth/ars-nouveau:
+  url: https//modrinth.com/mod/ars-nouveau
+  modId: ars_nouveau
+  title: Ars Nouveau
+  summary: Craft spells and construct magical automations
+
+  description: some magic MOD
+
+
+# ---------------------------- Deeper and Darker ----------------------------- #
+modrinth/deeperdarker:
+  url: https//modrinth.com/mod/deeperdarker
+  modId: deeperdarker
+  title: Deeper and Darker
+  summary: A Minecraft mod which features more blocks, items, armors, and hidden mysteries to complement the Deep Dark biome.
+
+  description: deeper darker dim
+
+
+# -------------------------------- Stellaris --------------------------------- #
+modrinth/stellaris:
+  url: https//modrinth.com/mod/stellaris
+  modId: stellaris
+  title: Stellaris
+  summary: Discover the next gen space mod!
+
+  description: space MOD
+
+
+# ----------------------------------- Psi ------------------------------------ #
+modrinth/psi:
+  url: https//modrinth.com/mod/psi
+  modId: psi
+  title: Psi
+  summary: Psi is a mod about spell programming, inspired by Mahouka
+
+  description: programmable spells too
+
+
+# -------------------------- curseforge/apotheosis --------------------------- #
+curseforge/apotheosis:
+  description: tools with modifiers I think
+
+
+# ----------------------------- Bountiful Fares ------------------------------ #
+modrinth/bountiful-fares:
+  url: https//modrinth.com/mod/bountiful-fares
+  modId: bountifulfares
+  title: Bountiful Fares
+  summary: Enhances the food and farming side of Minecraft with new crops, mechanics, and content
+
+  description: assorted stuff a lot of food
+

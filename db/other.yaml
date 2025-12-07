@@ -1,0 +1,28 @@
+# ---------------------------- Hellions Sniffer+ ----------------------------- #
+modrinth/hellions-sniffer+:
+  url: https//modrinth.com/mod/hellions-sniffer+
+  title: Hellions Sniffer+
+  summary: A Sniffer expansion, adding new behaviors to the Sniffer, an ancient cave biome, and several new Sniffer-related plants.
+
+  description: bunch of sniffer content
+
+
+# --------------------------------- Packages --------------------------------- #
+modrinth/packages:
+  url: https//modrinth.com/mod/packages
+  modId: packages
+  title: Packages
+  summary: 512 items is all you need.
+
+  description: better drawers
+
+
+# ------------------------------ Metal Bundles ------------------------------- #
+modrinth/metal-bundles:
+  url: https//modrinth.com/mod/metal-bundles
+  modId: metalbundles
+  title: Metal Bundles
+  summary: Use bundles like never before with many intuitive interactions. And theres more bundles, much larger!
+
+  description: bundles its a different one but good
+
