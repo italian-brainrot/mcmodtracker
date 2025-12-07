@@ -1,0 +1,12 @@
+modrinth/create: # MOD SLUG on MOD-Rinth or Curse-Forge not supported！！！
+  url: https://modrinth.com/mod/create # create automatically
+  title: Create # create automatically
+  summary: Aesthetic Technology that empowers the Player # create automatically
+  modId: # JAR download  This create automatically
+
+  good: True # i type if check if exist or not exist
+  description: create MOD # i type
+
+
+
+

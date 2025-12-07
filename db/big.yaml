@@ -1,0 +1,48 @@
+# ---------------------------------- Create ---------------------------------- #
+modrinth/create:
+  url: https//modrinth.com/mod/create
+  modId: create
+  title: Create
+  summary: Aesthetic Technology that empowers the Player
+
+  description: Create MOD
+
+
+# ----------------------------- Farmer's Delight ----------------------------- #
+modrinth/farmers-delight:
+  url: https//modrinth.com/mod/farmers-delight
+  modId: farmersdelight
+  title: Farmers Delight
+  summary: A cozy expansion to farming and cooking!
+
+  description: Farmers Delight
+
+
+# ------------------------------- ValleyCraft -------------------------------- #
+modrinth/valleycraft:
+  url: https//modrinth.com/mod/valleycraft
+  title: ValleyCraft
+  summary: Farming & cooking overhaul with a dash of exploration!
+
+  description: last update was 1.18 but it was good stardew valley like food MOD
+
+
+# ----------------------------- Supplementaries ------------------------------ #
+modrinth/supplementaries:
+  url: https//modrinth.com/mod/supplementaries
+  modId: supplementaries
+  title: Supplementaries
+  summary: Vanilla+ additions Jars, signposts, faucets, weather vanes spring launchers, sconces, planters, lights, decoration and automation
+
+  description: good
+
+
+# ---------------------- Friends&Foes (Forge/NeoForge) ----------------------- #
+modrinth/friends-and-foes-forge:
+  url: https//modrinth.com/mod/friends-and-foes-forge
+  modId: friendsandfoes
+  title: Friends&Foes (Forge/NeoForge)
+  summary: Adds outvoted and forgotten mobs from the mob vote, expanding on their original concepts and adding new vanilla-like features. The mod includes Copper Golem, Crab, Glare, Moobloom, Iceologer, Rascal, Tuff Golem, Wildfire, Illusioner, Zombie Horse
+
+  description: mob votes
+

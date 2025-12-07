@@ -1,0 +1,39 @@
+# commit new changes bump version and commit create tag push changes push tag
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcmodtracker"
+description = "Minecraft MOD TRACKER. This is not a MOD manager, rather it tracks MODs and notifies you if they get updated to your Minecraft version and MOD-Loader, but you don't have them in your MOD-Pack."
+
+version = "0.0.1"
+dependencies = [
+  "requests",
+  "ruamel.yaml",
+]
+requires-python = ">= 3.12"
+readme = "README.md"
+authors = [
+  {name = "Italian Brainrot", email = "updtae@gmail.com"},
+]
+license = {file = "LICENSE"}
+keywords = ["Minecraft", "MODs"]
+
+
+[project.urls]
+Homepage = "https://github.com/italian-brainrot/mcmodmanager"
+Repository = "https://github.com/italian-brainrot/mcmodmanager"
+Issues = "https://github.com/italian-brainrot/mcmodmanager/isses"
+
+# [tool.setuptools]
+# package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.setuptools.packages]
+find = {}

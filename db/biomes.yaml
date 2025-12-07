@@ -1,0 +1,134 @@
+# ----------------------------- Biomes O' Plenty ----------------------------- #
+modrinth/biomes-o-plenty:
+  url: https//modrinth.com/mod/biomes-o-plenty
+  modId: biomesoplenty
+  title: Biomes O Plenty
+  summary: Adds 50+ unique biomes to enhance your world, with new trees, flowers, and more!
+
+  description: Biomes of Plenty
+
+
+# ------------------------- Oh The Biomes We've Gone ------------------------- #
+modrinth/oh-the-biomes-weve-gone:
+  url: https//modrinth.com/mod/oh-the-biomes-weve-gone
+  modId: biomeswevegone
+  title: Oh The Biomes Weve Gone
+  summary: An astounding sequel to the original BYG mod for 1.20.1+ with over 50+ biomes ranging from the magical to the realistic and all breathtaking!
+
+  description: BWG
+
+
+# -------------------------------- Spelunkery -------------------------------- #
+modrinth/spelunkery:
+  url: https//modrinth.com/mod/spelunkery
+  title: Spelunkery
+  summary: A cave overhaul mod with new cave variations, tool progression, and mining strategies to spice up your underground life.
+
+  description: Cave biomes but adds palladium but good otherwise
+
+
+# ------------------ Profundis Nine New Quality Cave Biomes ------------------ #
+modrinth/profundis:
+  url: https//modrinth.com/mod/profundis
+  title: Profundis Nine New Quality Cave Biomes
+  summary: A world generation mod adding in nine new cave biomes, to make the underground more varied.
+
+  description: nine new underground biomes
+
+
+# ---------------------------- Caves & Creatures ----------------------------- #
+modrinth/caves-and-creatures:
+  url: https//modrinth.com/mod/caves-and-creatures
+  title: Caves & Creatures
+  summary: Adds 3 new cave biomes, over 180 mobs, tamable pets, and more!
+
+  description: another cave mod untested
+
+
+# ------------------------------- Wilder Wild -------------------------------- #
+modrinth/wilder-wild:
+  url: https//modrinth.com/mod/wilder-wild
+  title: Wilder Wild
+  summary: This mod aims to upgrade the Wild Update!
+
+  description: wild update mod
+
+
+# ------------------------------ Biome Makeover ------------------------------ #
+modrinth/biome-makeover:
+  url: https//modrinth.com/mod/biome-makeover
+  title: Biome Makeover
+  summary: Biome Makeover is a mod that takes vanillas biomes and gives them a fresh coat of paint.
+
+  description: better vanilla biomes has some good stuff
+
+
+# ----------------------------- Nature's Spirit ------------------------------ #
+modrinth/natures-spirit:
+  url: https//modrinth.com/mod/natures-spirit
+  modId: natures_spirit
+  title: Natures Spirit
+  summary: A minecraft mod which enhances world generation with new biomes, blocks, and items
+
+  description: very good biomes
+
+
+# ---------------------------- Regions Unexplored ---------------------------- #
+modrinth/regions-unexplored:
+  url: https//modrinth.com/mod/regions-unexplored
+  modId: regions_unexplored
+  title: Regions Unexplored
+  summary: Regions Unexplored is a biome mod that overhauls the overworld and nether in many ways. With 70+ new biomes to explore, there is a plethora of new things to find!
+
+  description: many biomes
+
+
+# -------------------------------- Subsurface -------------------------------- #
+modrinth/subsurface:
+  url: https//modrinth.com/mod/subsurface
+  modId: mr_subsurface
+  title: Subsurface
+  summary: 11 New cave/underground biomes
+
+  description: datapack for cave biomes
+
+
+# ---------------------------- YUNG's Cave Biomes ---------------------------- #
+modrinth/yungs-cave-biomes:
+  url: https//modrinth.com/mod/yungs-cave-biomes
+  modId: yungscavebiomes
+  title: YUNGs Cave Biomes
+  summary: Adds new vanilla+ cave biomes and underground content!
+
+  description: Yung cave biomes (different from Yung better caves)
+
+
+# ------------------------- YUNG's Better Mineshafts ------------------------- #
+modrinth/yungs-better-mineshafts:
+  url: https//modrinth.com/mod/yungs-better-mineshafts
+  modId: bettermineshafts
+  title: YUNGs Better Mineshafts
+  summary: A long-awaited and much-needed abandoned mineshaft overhaul!
+
+  description: Yung better mineshafts
+
+
+# ------------------------------ YUNG's Extras ------------------------------- #
+modrinth/yungs-extras:
+  url: https//modrinth.com/mod/yungs-extras
+  modId: yungsextras
+  title: YUNGs Extras
+  summary: Extra structures, features, and vanilla+ content suitable for any modpack!
+
+  description: Yung structures
+
+
+# -------------------------------- Ecologics --------------------------------- #
+modrinth/ecologics:
+  url: https//modrinth.com/mod/ecologics
+  modId: ecologics
+  title: Ecologics
+  summary: Simple vanilla biome updates, with fun mobs, blocks, and more!
+
+  description: more biomes
+
