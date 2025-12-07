@@ -28,6 +28,7 @@ modrinth/hex-casting:
 # ------------------------------- Ars Nouveau -------------------------------- #
 modrinth/ars-nouveau:
   url: https//modrinth.com/mod/ars-nouveau
+  modId: ars_nouveau
   title: Ars Nouveau
   summary: Craft spells and construct magical automations
 

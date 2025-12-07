@@ -125,6 +125,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
 
     # i download all MOD？ to get modId
     # add modIds
+    print("-----------DOWNLOADING MOD INFO-----------")
     for yaml_path, mod_str in pbar(all_mod):
 
         site, slug = mod_str.split("/")
@@ -187,6 +188,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                         f.write(text)
 
     # add all MOD
+    print("\n-----------LOADING MOD-----------")
     mods = {}
     for jar in pbar(list(mod_dir.iterdir())):
         if jar.is_file() and str(jar).lower().endswith(".jar"):
@@ -194,16 +196,17 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                 mod = MOD(jar)
                 mods[mod.modId] = mod
             except Exception as e:
-                print(f"fail when load MOD {jar}: {e}")
+                print(f"fail when load MOD {os.path.basename(jar)}: {e}")
 
-    print("-----------SUMMARY-----------")
+    print("\n-----------SCAN-----------")
     # check MC Creater MOD and MC Function MOD
-    for mod in pbar(list(mods.values())):
+    for mod in mods.values():
         is_mcreator, msg = is_mcreator_mod(mod.jar)
-        if is_mcreator: print(f'DETECT MC CREATER MOD: {mod.displayName} "{mod.jar}" {msg}')
-        if uses_mcfunction(mod.jar): print(f'DETECT MC FUNCTION MOD {mod.displayName}: "{mod.jar}"')
+        if is_mcreator: print(f'DETECT MC CREATER MOD: {mod.displayName} "{mod.jar.name}" {msg}')
+        if uses_mcfunction(mod.jar): print(f'DETECT MC FUNCTION MOD {mod.displayName}: "{mod.jar.name}"')
 
-    # check all MOD that not install
+    # check installed MOD
+    print("\n-----------CHECKING INSTALLED MOD-----------")
     for yaml_path, mod_str in all_mod:
         mod_dict = yamls[yaml_path][mod_str]
         if "modId" not in mod_dict: continue
@@ -211,14 +214,14 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
         if mod_dict['modId'] not in mods:
             if mod_dict.get("good", True):
                 if slug in SLUG_TO_VERSIONS:
-                    if [game_version, loader] in slug[SLUG_TO_VERSIONS]:
+                    if f"{game_version}/{loader}" in SLUG_TO_VERSIONS[slug]:
                         print(f"{yaml_path.name}: MOD {mod_dict['title']} is available: {mod_dict['url']}")
 
                 else:
                     latest = get_latest_version(slug, loaders=loader, game_versions=game_version)
                     if latest is None: continue
                     if slug not in SLUG_TO_VERSIONS: SLUG_TO_VERSIONS[slug] = []
-                    SLUG_TO_VERSIONS[slug].append([game_version, loader])
+                    SLUG_TO_VERSIONS[slug].append(f"{game_version}/{loader}")
                     yamlwrite(_SLUG_TO_VERSION_PATH, SLUG_TO_VERSIONS)
                     print(f"{yaml_path.name}: MOD {mod_dict['title']} is available: {mod_dict['url']}")
 

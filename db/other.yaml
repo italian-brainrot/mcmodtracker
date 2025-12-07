@@ -1,4 +1,4 @@
-# ---------------------------- Hellion's Sniffer+ ---------------------------- #
+# ---------------------------- Hellions Sniffer+ ----------------------------- #
 modrinth/hellions-sniffer+:
   url: https//modrinth.com/mod/hellions-sniffer+
   title: Hellions Sniffer+
@@ -17,7 +17,12 @@ modrinth/packages:
   description: better drawers
 
 
-# -------------------------- modringh/metal-bundles -------------------------- #
+# ------------------------------ Metal Bundles ------------------------------- #
 modrinth/metal-bundles:
+  url: https//modrinth.com/mod/metal-bundles
+  modId: metalbundles
+  title: Metal Bundles
+  summary: Use bundles like never before with many intuitive interactions. And theres more bundles, much larger!
+
   description: bundles its a different one but good
 

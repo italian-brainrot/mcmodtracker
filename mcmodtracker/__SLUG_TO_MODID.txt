@@ -21,3 +21,4 @@ ecologics/ecologics
 packages/packages
 gravelmon/gravelmon
 rctmod/rctmod
+metal-bundles/metalbundles
