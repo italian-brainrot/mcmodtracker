@@ -36,7 +36,7 @@ def yamlwrite(file: str | os.PathLike, d: dict, ):#, sequence = 4, offset = 2):
 class MOD:
     def __init__(self, jar: str | os.PathLike):
         if not str(jar).lower().endswith(".jar"):
-            raise RuntimeError(f"got {jar=} it doesnt have JAR extension")
+            raise RuntimeError(f'Got "{jar}" which doesnt have JAR extension')
 
         self.jar = Path(jar)
 
@@ -46,7 +46,7 @@ class MOD:
 
             manifest = contents / "META-INF" / "neoforge.mods.toml"
             if not manifest.is_file():
-                raise RuntimeError(f"mcmodtracker currently only support NeoForge MOD and {jar} is not NeoForge")
+                raise RuntimeError(f'mcmodtracker currently only support NeoForge MODs, and "{self.jar.name}" is probably not NeoForge')
 
             with open(manifest, "rb") as f:
                 data = tomllib.load(f)
@@ -120,7 +120,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
         mod_strs = list(yaml.keys())
         for mod_str in mod_strs:
             if mod_str in all_mod_str:
-                print(f"WARNING duplicate MOD in {yaml_path.name} and {all_mod_str[mod_str].name}")
+                print(f"Warning: Duplicate MOD {mod_str} in {yaml_path.name} and {all_mod_str[mod_str].name}")
             all_mod_str[mod_str] = yaml_path
 
     # i download all MOD？ to get modId
@@ -130,7 +130,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
 
         site, slug = mod_str.split("/")
         if site != "modrinth":
-            print(f"WARNING unsupported SITE in {mod_str}")
+            print(f"Warning: unsupported site in {mod_str}")
             continue
 
         # load modId
@@ -167,7 +167,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                         download_version(version, file=tmpfile)
                         mod = MOD(tmpfile)
                     except Exception as e:
-                        warnings.warn(f"fail when download MOD {slug}: {e}")
+                        warnings.warn(f'Failed to download "{slug}": {e}')
                         continue
 
                     # update SLUG to modId
@@ -188,7 +188,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                         f.write(text)
 
     # add all MOD
-    print("\n-----------LOADING MOD-----------")
+    print("\n-----------LOADING MODS-----------")
     mods = {}
     for jar in pbar(list(mod_dir.iterdir())):
         if jar.is_file() and str(jar).lower().endswith(".jar"):
@@ -196,17 +196,17 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                 mod = MOD(jar)
                 mods[mod.modId] = mod
             except Exception as e:
-                print(f"fail when load MOD {os.path.basename(jar)}: {e}")
+                print(f'Failed to load "{os.path.basename(jar)}": {e}')
 
-    print("\n-----------SCAN-----------")
+    print("\n-----------SCANNING LOCAL MODS-----------")
     # check MC Creater MOD and MC Function MOD
     for mod in mods.values():
         is_mcreator, msg = is_mcreator_mod(mod.jar)
-        if is_mcreator: print(f'DETECT MC CREATER MOD: {mod.displayName} "{mod.jar.name}" {msg}')
-        if uses_mcfunction(mod.jar): print(f'DETECT MC FUNCTION MOD {mod.displayName}: "{mod.jar.name}"')
+        if is_mcreator: print(f'Detected a MOD that uses MCreator: "{mod.displayName}" in "{mod.jar.name}" {msg}')
+        if uses_mcfunction(mod.jar): print(f'Detected a MOD that uses MCFunction: "{mod.displayName}" in "{mod.jar.name}"')
 
     # check installed MOD
-    print("\n-----------CHECKING INSTALLED MOD-----------")
+    print("\n-----------CHECKING MISSING MODS-----------")
     for yaml_path, mod_str in all_mod:
         mod_dict = yamls[yaml_path][mod_str]
         if "modId" not in mod_dict: continue
@@ -215,7 +215,7 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
             if mod_dict.get("good", True):
                 if slug in SLUG_TO_VERSIONS:
                     if f"{game_version}/{loader}" in SLUG_TO_VERSIONS[slug]:
-                        print(f"{yaml_path.name}: MOD {mod_dict['title']} is available: {mod_dict['url']}")
+                        print(f"{yaml_path.name}: MOD \"{mod_dict['title']}\" is not installed, but is available: {mod_dict['url']}")
 
                 else:
                     latest = get_latest_version(slug, loaders=loader, game_versions=game_version)
@@ -223,10 +223,10 @@ def analyze_mods(db_dir: str | os.PathLike, mod_dir: str | os.PathLike, game_ver
                     if slug not in SLUG_TO_VERSIONS: SLUG_TO_VERSIONS[slug] = []
                     SLUG_TO_VERSIONS[slug].append(f"{game_version}/{loader}")
                     yamlwrite(_SLUG_TO_VERSION_PATH, SLUG_TO_VERSIONS)
-                    print(f"{yaml_path.name}: MOD {mod_dict['title']} is available: {mod_dict['url']}")
+                    print(f"{yaml_path.name}: MOD \"{mod_dict['title']}\" is not installed, but is available: {mod_dict['url']}")
 
         if mod_dict['modId'] in mods:
             if mod_dict.get("good", True) is False:
-                print(f"{yaml_path.name}: bad MOD {mod_dict['title']} is installed: {mods[mod_dict['modId']].jar}")
+                print(f"{yaml_path.name}: MOD \"{mod_dict['title']}\" is installed, but is marked as bad: {mods[mod_dict['modId']].jar}")
 
     print("\n-----------DONE-----------")
