@@ -42,3 +42,31 @@ modrinth/good-ending:
 
   description: another animal MOD
 
+
+# ------------------------------ More Critters ------------------------------- #
+modrinth/more-critters:
+  url: https//modrinth.com/mod/more-critters
+  title: More Critters
+  summary: Adds new fantasy creatures in vanilla style
+
+  description: 20 cool mobs
+
+
+# ----------------------------- Koopa's Critters ----------------------------- #
+modrinth/koopas-critters:
+  url: https//modrinth.com/mod/koopas-critters
+  modId: koopascritters
+  title: Koopas Critters
+  summary: Adds obscure & endangered animals to minecraft
+
+  description: cool mobs
+
+
+# ---------------------------- Wildlife [Fabric] ----------------------------- #
+modrinth/wildlife-fabric:
+  url: https//modrinth.com/mod/wildlife-fabric
+  title: Wildlife [Fabric]
+  summary: Adds extra animals and insects to Minecraft!
+
+  description: chirpy wildlife gotta look out for that forge verison
+
